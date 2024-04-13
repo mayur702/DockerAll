@@ -1,0 +1,101 @@
+
+                                   * Docker Commands *
+
+
+
+1) docker images --- show docker images
+
+2) docker image <Image ID> -t <Image Name>  --- docker Images tag
+
+3) docker images ls --- show all docker images
+
+4) docker pull <Image> --- pull image from registry
+
+5) docker ps --- shows running containers
+
+6) docker ps -a --- shows all containers
+
+7) docker start <cont_id> --- start the containers
+
+8) docker stop <cont_id> --- stops the containers
+
+9) docker run <image> --- pull and start the container
+
+10) docker run -d <image> -- runs containers of detach mode (forground uses)
+
+11) docker rm <con_id> --- removes container 
+
+12) docker login --- login to docker hub to put your username and password
+
+13) docker push dockerusername?repo:tag --- push your created images to docker hub
+
+14) docker restart <cont_id> --- restarts container
+
+15) docker inspect <cont_id> --- info allout docker object
+
+16) docker exec -it <cont_id> bash --- to enter/execute session in containers
+
+17) docker rmi <image> --- remove docker images
+
+18) docker build <image> --- build image from dockerfile
+
+19) docker build -f <dockerfilename> --- build image from dockerfile named differntly
+
+20) docker build -t image:tag --- build and add name:tag for your image
+
+21) docker run -d -P <image> --- get default port for containers
+
+22) docker logs <container_id/name> --- to view lods of containers
+
+23) docker pause?unpause <cont_id> --- pause/unpause all processes
+
+24) docker kill <cont_id> to forcefully stop containers
+
+25) docker cp <cont_id/name>:path_in_container --- to copy file from the container into local current location
+
+26) docker cp file.txt <cont_id>:destination path --- to copy from local machine into container
+
+27) docker commit <cont_id> <image_name:tag> --- to create a new image from state of containers
+
+28) docker attach <cont_id> --- attaches your local terminal  to your container can be substitude for exec command
+
+29) docker create <image_name> --- create a container in stop state 
+
+30) docker info --- all information docker system
+
+31) docker version --- info at docker version
+
+32) docker system df --- used to display disk usage info related to docker
+
+33) docker system prune --- remove unused data
+
+
+
+          * Network plugin command *
+
+1) docker network ls --- list all n/w
+
+2) docker network create --- driver bridge mynet
+
+3) docker network create Net-name --- create a network (if no  driver specified a bridge drivers is mode)
+
+4)  docker inspect Net_name --- to view details of net-name n/w
+
+5) docker rm Net_name --- delete n/w
+
+6) docker prune Net_name --- delete unused n/w
+
+
+           * Docker volume commands *
+
+1) docker volume create <vol_name> --- create a volume
+
+2) docker volume ls --- list all volumes
+
+3) docker volume inspect <vol_name> --- remove volume
+
+4) docker volume rm <vol_name> --- remove volume 
+
+5) docker volume prune <vol_name> --- remove unused volume
+
+

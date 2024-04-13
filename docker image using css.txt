@@ -1,0 +1,28 @@
+FROM centos:7
+# Label
+
+LABEL Author="Mayur"
+
+# Install httpd
+RUN yum install httpd -y
+
+# Add the Ports
+EXPOSE 80
+
+#change Directory
+WORKDIR /var/www/html
+
+# Install unzip
+RUN yum install unzip -y
+
+# copy css templete link and paste
+RUN curl -O https://www.free-css.com/assets/files/free-css-templates/download/page296/neogym.zip
+
+# unzip this file
+RUN unzip neogym.zip
+
+# Remove zip file 
+RUN rm -rf neogym.zip
+
+# start the httpd service
+CMD ["httpd","-D","FOREGROUND"]
